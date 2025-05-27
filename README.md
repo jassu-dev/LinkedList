@@ -46,18 +46,19 @@ l1.insert_index(1, 7)
 l1.append(6)
 l1.pop_s(1)
 l1.display()
+```
 
-Output
+#Output
 5
 7
 3
 4
 6
 
-Notes
+#Notes
 The method __contanis__ is misspelled. To enable Python's in keyword, rename it to __contains__.
 
 Basic error handling (e.g., out-of-range index) is not implemented and should be added for robustness.
 
-License
+#License
 This project is licensed under the MIT License.
