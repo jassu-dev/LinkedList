@@ -1,58 +1,43 @@
-Linked List Implementation in Python
-This repository contains a basic implementation of a singly linked list in Python. It provides functionality to perform standard operations such as appending, prepending, inserting at a specific index, deleting elements, popping elements, and displaying the list.
+# Linked List Implementation in Python
 
-Features
-Create a linked list
+This is a simple implementation of a singly linked list in Python. It includes basic operations like append, prepend, insert, delete, pop, and display.
 
-Append elements to the end
+## Features
 
-Prepend elements to the beginning
+- Append elements to the end of the list
+- Prepend elements to the start of the list
+- Insert elements at a specific index
+- Delete an element by value
+- Pop an element by index or the last element
+- Display all elements in the list
+- Get the length of the list
+- Check if a value exists in the list
 
-Insert elements at a specific index
+## Classes and Methods
 
-Delete an element by value
+### `Node`
 
-Pop an element by index or the last element if no index is provided
+Represents a single node in the list.
 
-Display the list
+- `val`: The value stored in the node
+- `next`: Pointer to the next node
 
-Get the length of the list
+### `Linked_List`
 
-Check if a value exists in the list
+Manages the linked list and provides various methods:
 
-Class Descriptions
-Node
-Represents a single node in the linked list.
+- `append(val)`: Add a node with the specified value at the end
+- `prepend(data)`: Add a node with the specified value at the beginning
+- `insert_index(index, data)`: Insert a node at a given index
+- `delete(data)`: Remove the first node with the given value
+- `pop_s(index=None)`: Remove a node at the specified index, or the last node if no index is given
+- `display()`: Print all elements in the list
+- `__len__()`: Return the number of nodes in the list
+- `__contanis__(valu)`: Check if a value exists in the list (note: typo in method name)
 
-Attributes:
-val: Stores the value of the node
+## Example Usage
 
-next: Points to the next node in the list
-
-Linked_List
-Handles linked list operations.
-
-Methods:
-append(val): Adds a new node with val at the end
-
-prepend(data): Adds a new node with data at the beginning
-
-insert_index(index, data): Inserts a new node with data at the specified index
-
-delete(data): Removes the first occurrence of data from the list
-
-pop_s(index=None): Removes the element at index, or the last element if index is None
-
-display(): Prints all values in the list
-
-__len__(): Returns the length of the list
-
-__contanis__(valu): Returns True if valu is in the list (note: method name is misspelled)
-
-Example Usage
-python
-Copy
-Edit
+```python
 l1 = Linked_List()
 l1.append(4)
 l1.insert_index(0, 3)
@@ -61,18 +46,18 @@ l1.insert_index(1, 7)
 l1.append(6)
 l1.pop_s(1)
 l1.display()
+
 Output
-Copy
-Edit
 5
 7
 3
 4
 6
-Notes
-Method __contanis__ appears to be a typo and should likely be renamed to __contains__ to work with Python's in keyword.
 
-No exception handling is present; consider adding checks for edge cases (e.g. deleting or inserting from/to an empty list).
+Notes
+The method __contanis__ is misspelled. To enable Python's in keyword, rename it to __contains__.
+
+Basic error handling (e.g., out-of-range index) is not implemented and should be added for robustness.
 
 License
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
